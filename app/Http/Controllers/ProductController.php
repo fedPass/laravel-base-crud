@@ -16,12 +16,22 @@ class ProductController extends Controller
 
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     public function store(Request $request)
     {
-        //
+        // prendo i dati del form
+        $form_data = $request->all();
+        //creo nuova istanza
+        $product = new Product();
+        $product->name = $form_data['name'];
+        $product->description = $form_data['description'];
+        $product->price = $form_data['price'];
+        //salvo
+        $product->save();
+        //faccio redirect all'index
+        return redirect()->route('products.index');
     }
 
     public function show(Product $product)
