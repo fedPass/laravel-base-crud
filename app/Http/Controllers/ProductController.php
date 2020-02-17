@@ -42,12 +42,14 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        //
+        return view('products.edit', ['product'=> $product]);
     }
 
     public function update(Request $request, Product $product)
     {
-        //
+        $form_data = $request->all();
+        $product->update($form_data);
+        return redirect()->route('products.index');
     }
 
     public function destroy(Product $product)

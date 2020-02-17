@@ -29,7 +29,7 @@
                               <td class="float-right">
                                   {{-- passo alla href due param: la route e l'id --}}
                                   <a href="{{ route('products.show', ['product'=>$product->id]) }}" class="btn btn-outline-success">Dettagli</a>
-                                  <a href="#" class="btn btn-success">Modifica</a>
+                                  <a href="{{ route('products.edit', ['product'=>$product->id]) }}" class="btn btn-success">Modifica</a>
                                   <a href="#" class="btn btn-danger">Elimina</a>
                               </td>
 
