@@ -27,7 +27,8 @@
                               <td>{{ $product->description }}</td>
                               <td>{{ $product->price }}</td>
                               <td class="float-right">
-                                  <a href="#" class="btn btn-outline-success">Dettagli</a>
+                                  {{-- passo alla href due param: la route e l'id --}}
+                                  <a href="{{ route('products.show', ['product'=>$product->id]) }}" class="btn btn-outline-success">Dettagli</a>
                                   <a href="#" class="btn btn-success">Modifica</a>
                                   <a href="#" class="btn btn-danger">Elimina</a>
                               </td>

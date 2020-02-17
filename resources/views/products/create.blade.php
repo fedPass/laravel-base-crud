@@ -1,7 +1,7 @@
 {{-- mi riporto la struttura --}}
 @extends('layout.main')
 {{-- definisco la section per il title --}}
-@section('page-title','Product - Create')
+@section('page-title','Product - Add new product')
 {{-- definisco la section per il contenuto --}}
 @section('content')
     <div class="container">

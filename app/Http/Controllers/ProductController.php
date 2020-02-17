@@ -36,7 +36,8 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        //
+        //model come parametro
+        return view('products.show', ['product'=> $product]);
     }
 
     public function edit(Product $product)
