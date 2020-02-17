@@ -30,7 +30,11 @@
                                   {{-- passo alla href due param: la route e l'id --}}
                                   <a href="{{ route('products.show', ['product'=>$product->id]) }}" class="btn btn-outline-success">Dettagli</a>
                                   <a href="{{ route('products.edit', ['product'=>$product->id]) }}" class="btn btn-success">Modifica</a>
-                                  <a href="#" class="btn btn-danger">Elimina</a>
+                                  <form class="d-inline" method="post" action="{{ route('products.destroy', ['product'=>$product->id]) }}">
+                                      @csrf
+                                      @method('DELETE')
+                                      <input type="submit" value="Elimina" class="btn btn-danger">
+                                  </form>
                               </td>
 
                             </tr>

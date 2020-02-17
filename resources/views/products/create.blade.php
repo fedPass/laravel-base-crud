@@ -12,17 +12,17 @@
                     @csrf
                   <div class="form-group">
                     <label for="name">Nome</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nome" value="{{ $product->name }}" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nome">
                   </div>
                   <div class="form-group">
                     <label for="name">Descrizione</label>
-                    <input type="text" class="form-control" id="description" name="description" placeholder="Descrizione" value="{{ $product->description }}" required>
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Descrizione">
                   </div>
                   <div class="form-group">
                     <label for="name">Prezzo</label>
-                    <input type="text" class="form-control" id="price" name="price" placeholder="Prezzo" value="{{ $product->price }}" required>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Prezzo">
                   </div>
-                  <button type="submit" class="btn btn-primary">Modifica</button>
+                  <button type="submit" class="btn btn-primary">Inserisci nuovo prodotto</button>
                 </form>
             </div>
         </div>
